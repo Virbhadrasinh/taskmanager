@@ -1,0 +1,73 @@
+.add-btn-parent {
+    height: 50px;
+}
+
+.add-btn {
+    font-size: 16px;
+    line-height: 28px;
+    position: absolute;
+    top: 11px;
+    left: 0;
+    height: 27px;
+    width: 27px;
+    text-align: center;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+.well {
+    width: 300px;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.add-board {
+    text-align: center;
+}
+
+hr {
+    border-top: 1px solid #333;
+    margin: 1px;
+}
+
+.add-details{
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-details:hover{
+    background-color: #999999;
+}
+
+.add-details h4 {
+    font-weight: bold;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.add-task {
+    right: 0;
+    margin-top: 10px;
+    z-index: 10;
+    position: absolute;
+}
+
+.boards {
+    left: 0;
+    margin-top: 10px;
+    z-index: 10;
+    position: absolute;
+}
+
+.board-name {
+    height: 36px;
+    width: 100%;
+    border-left: 36px solid #5bc0de;
+    background-color: #28a4c9;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
