@@ -1,0 +1,75 @@
+.board-container {
+    background-color: #5bc0de;
+    overflow-x: scroll;
+    height: 92vh;
+}
+
+.js-lists {
+    display: table;
+    border-spacing: 10px;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.list-container {
+    display: table-cell;
+    width: 300px;
+    background: #e3e3e3;
+    border-radius: 4px;
+}
+
+.heading {
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.js-items {
+    margin: 10px;
+}
+
+.item-container {
+    background-color: #ffffff;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.item-container h6 {
+    margin: 3px 5px 10px;
+}
+
+.item-container p {
+    margin: 0px 5px;
+}
+
+.icon-edit {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.edit-content input {
+    margin-bottom: 10px;
+}
+
+.add-new-card {
+    padding: 7px 10px;
+    text-decoration: none;
+    color: #939393;
+    cursor: pointer;
+    margin: 3px 5px 10px;
+    width: 97%;
+}
+
+
+.add-new-card:hover {
+    background: #c3c3c3;
+    color: #222;
+    text-decoration: underline;
+}
+
+.add-content {
+    padding: 5px;
+}
