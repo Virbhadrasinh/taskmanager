@@ -1,3 +1,3 @@
-define(function(require) {
-	return window.jQuery.noConflict();
+define(function (require) {
+    return window.jQuery.noConflict();
 });
