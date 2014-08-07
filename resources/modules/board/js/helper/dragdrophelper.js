@@ -5,6 +5,7 @@ define(function (require) {
     $(document).on('dragstart', '.item-container', function (e) {
         e.originalEvent.dataTransfer.effectAllowed = 'move';
         elementDragged = this.parentNode;
+        e.originalEvent.dataTransfer.setData('text/plain', 'dummy');
     });
 
     $(document).on('dragend', '.item-container', function (e) {
