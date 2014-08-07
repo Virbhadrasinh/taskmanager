@@ -1,4 +1,16 @@
 <div class="board-container">
-    <h3 class="heading">Welcome Board</h3>
+    <div class="board">
+        <span class="board-heading">{{name}}</span>
+        <span class="add-list">Add New List</span>
+    </div>
+    <div class="well add-list-container" style="display: none;">
+        <div>Title</div>
+        <input type="text" class="list-name"/>
+
+        <div>Description</div>
+        <textarea style="width: 100%; height: 50px;" class="list-description"></textarea>
+        <button type="button" class="btn btn-success save-list">Save</button>
+        <button type="button" class="btn btn-danger cancel-item">Cancel</button>
+    </div>
     <div class="js-lists"></div>
 </div>

@@ -6,21 +6,17 @@ var require = {
         underscore: 'libraries/underscore/underscore',
         backbone: 'libraries/backbone/backbone',
         handlebars: 'libraries/handlebars/handlebars',
-        handlebarshelpers: 'libraries/handlebars/handlebarshelpers',
-        bootstrap: 'libraries/bootstrap/js/bootstrap.min',
         css: 'libraries/require/css',
-        "css-builder": 'libraries/require/css-builder',
         text: 'libraries/require/text',
         normalize: "libraries/require/normalize",
-        uilogs: 'libraries/core/uilogs',
-        utils: 'libraries/core/utils',
-        map: 'libraries/core/map',
-        ajaxhandler: 'libraries/ajaxhandler/ajaxhandler'
+        storagehandler: 'libraries/storagehandler/storagehandler',
+        sampleboardjson: 'libraries/storagehandler/sampleboardjson'
     },
     shim: {
         'underscore': {
             exports: '_',
             init: function () {
+                "use strict";
                 return this._.noConflict();
             }
         },
@@ -28,14 +24,12 @@ var require = {
             deps: [ 'jquery', 'underscore' ],
             exports: 'Backbone',
             init: function (_) {
+                "use strict";
                 return this.Backbone.noConflict();
             }
         },
         'handlebars': {
             exports: 'Handlebars'
-        },
-        'handlebarshelpers': {
-            deps: [ 'handlebars' ]
         }
     },
     waitSeconds: 120
