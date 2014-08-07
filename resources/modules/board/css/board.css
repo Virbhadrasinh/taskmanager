@@ -1,7 +1,31 @@
+.add-list {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.add-list-container {
+    width: 300px;
+    max-width: 300px;
+    position: absolute;
+    z-index: 10;
+    left: 15%;
+    top: 6%;
+}
+
+.board {
+    margin: 10px;
+}
+
+.board-heading {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .board-container {
     background-color: #5bc0de;
     overflow-x: scroll;
     height: 92vh;
+    position: relative;
 }
 
 .js-lists {
@@ -62,7 +86,6 @@
     margin: 3px 5px 10px;
     width: 97%;
 }
-
 
 .add-new-card:hover {
     background: #c3c3c3;

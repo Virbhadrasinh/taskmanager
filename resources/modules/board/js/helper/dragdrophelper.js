@@ -1,5 +1,8 @@
 define(function (require) {
+    "use strict";
+
     var $ = require('jquery'),
+        storageHandler = require('storagehandler'),
         elementDragged = null;
 
     $(document).on('dragstart', '.item-container', function (e) {
@@ -31,15 +34,24 @@ define(function (require) {
         if (e.stopPropagation) e.stopPropagation();
 
         var element = $(this),
-            itemContainer = $(this).find('.js-items')
-        oldHTMLItems = itemContainer.html();
+            itemContainer = $(this).find('.js-items'),
+            oldHTMLItems = itemContainer.html(),
+            boardid = element.data('boardid'),
+            currentListId = element.data('listid'),
+            draggedElementListID = $(elementDragged).data('listid'),
+            draggedElementItemID = $(elementDragged).data('itemid');
 
-        element.removeClass('over');
-        itemContainer.html(elementDragged);
-        itemContainer.append(oldHTMLItems);
+        if(currentListId !== draggedElementListID){
+            element.removeClass('over');
+            storageHandler.editItem(boardid, currentListId, draggedElementItemID, storageHandler.getItem(boardid, draggedElementListID, draggedElementItemID));
+            storageHandler.removeItem(boardid, draggedElementListID, draggedElementItemID);
+            $(elementDragged).data('listid', currentListId);
+            itemContainer.html(elementDragged);
+            itemContainer.append(oldHTMLItems);
+            // Remove the element from the list.
+            $(elementDragged).parent('.js-items').remove(elementDragged);
+        }
 
-        // Remove the element from the list.
-        $(elementDragged).parent('.js-items').remove(elementDragged);
         elementDragged = null;
         return false;
     });

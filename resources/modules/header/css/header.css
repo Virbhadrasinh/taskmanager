@@ -1,4 +1,4 @@
-.add-btn-parent {
+.add-icon-container {
     height: 50px;
 }
 
@@ -30,13 +30,13 @@ hr {
     margin: 1px;
 }
 
-.add-details{
+.add-details {
     padding: 5px;
     border-radius: 4px;
     cursor: pointer;
 }
 
-.add-details:hover{
+.add-details:hover {
     background-color: #999999;
 }
 
@@ -48,7 +48,7 @@ hr {
     margin-bottom: 0px;
 }
 
-.add-task {
+.add-board-container {
     right: 0;
     margin-top: 10px;
     z-index: 10;
@@ -70,4 +70,9 @@ hr {
     padding: 10px;
     margin-bottom: 10px;
     cursor: pointer;
+    border-radius: 4px
+}
+
+.error {
+    margin-top: 10px;
 }
