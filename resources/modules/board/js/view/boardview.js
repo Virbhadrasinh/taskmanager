@@ -1,6 +1,7 @@
 define(function (require) {
     "use strict";
     require('css!./../../css/board.css');
+    require('./../helper/dragdrophelper');
 
     var Backbone = require('backbone'),
         Handlebars = require('handlebars'),
@@ -13,16 +14,17 @@ define(function (require) {
             },
             render: function (options) {
                 this.$el.html(compiledTemplate());
-                var that =this;
-                function add(length){
+                var that = this;
+
+                function add(length) {
                     new ListView({
-                        container : that.$('.js-lists'),
-                        length : length
+                        container: that.$('.js-lists'),
+                        length: length
                     });
                 }
 
-                for(var i = 0;i < 10; i++){
-                    add(i+1);
+                for (var i = 0; i < 10; i++) {
+                    add(i + 1);
                 }
             },
             events: {
